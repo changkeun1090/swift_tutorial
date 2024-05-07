@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class MyViewController: UIViewController {
 
     
     
@@ -11,8 +11,7 @@ class ViewController: UIViewController {
         // 앱 실행 시 처음 실행되는 함수
         super.viewDidLoad()
     }
-
-    
+        
     @IBAction func buttonPressed(_ sender: UIButton) {
         
         mainLabel.text = "안녕하세요"

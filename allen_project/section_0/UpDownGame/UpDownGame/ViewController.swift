@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         // 선택된 숫자를 userChoice에 할당
-        userChoice = sender.tag 
+        userChoice = sender.tag
         
         // 선택된 숫자를 numberLabel의 표시
         numberLabel.text = String(userChoice)
