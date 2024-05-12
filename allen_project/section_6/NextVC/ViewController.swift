@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  NextVC
-//
-//  Created by Allen H on 2021/12/05.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -12,16 +5,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         
     }
     
     // 1) 코드로 화면 이동 (다음화면이 코드로 작성되어있을때만 가능한 방법)
     @IBAction func codeNextButtonTapped(_ sender: UIButton) {
 
+        let firstVC = FirstViewController()
+        firstVC.someString = "I had some help"
         
+//         firstVC.mainLabel.text = "I had some help"
+        // :: 코드에서는 가능하지만 스토리보드에서는 이런 방식을 사용할 수 없다.
         
-        
-        
+//        firstVC.modalPresentationStyle = .fullScreen
+        present(firstVC, animated: true, completion: nil)
+                        
     }
     
     // 2) 코드로 스토리보드 객체를 생성해서, 화면 이동
