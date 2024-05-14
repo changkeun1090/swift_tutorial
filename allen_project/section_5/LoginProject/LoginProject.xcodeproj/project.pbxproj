@@ -37,6 +37,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD2117C02BF325750091625A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD907F732BEC4CF000CD01B9 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BD2117C12BF3257D0091625A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD907F752BEC4CF000CD01B9 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD2117C22BF325850091625A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BD907F632BEC4CF000CD01B9 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +81,9 @@
 			children = (
 				BD907F6F2BEC4CF000CD01B9 /* AppDelegate.swift */,
 				BD907F712BEC4CF000CD01B9 /* SceneDelegate.swift */,
-				BD907F732BEC4CF000CD01B9 /* ViewController.swift */,
-				BD907F752BEC4CF000CD01B9 /* Main.storyboard */,
+				BD2117C22BF325850091625A /* Models */,
+				BD2117C12BF3257D0091625A /* Views */,
+				BD2117C02BF325750091625A /* Controllers */,
 				BD907F782BEC4CF100CD01B9 /* Assets.xcassets */,
 				BD907F7A2BEC4CF100CD01B9 /* LaunchScreen.storyboard */,
 				BD907F7D2BEC4CF100CD01B9 /* Info.plist */,

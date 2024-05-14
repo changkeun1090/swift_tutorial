@@ -1,13 +1,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var calcurateButton: UIButton!
-    var bmi: Double?
+    
+    var bmiManager = BMICalculatorManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +31,6 @@ class ViewController: UIViewController {
        }
     
     @IBAction func calcurateButtonTapped(_ sender: UIButton) {
-        if let h = heightTextField.text, let w = weightTextField.text {
-            bmi = calcurateBMI(height: h, weight: w)
-        }
     }
     
     // 다음화면으로 넘어갈 지 허락맡기
@@ -56,21 +52,12 @@ class ViewController: UIViewController {
         
         if segue.identifier == "toSecondVC" {
             if let secondVC = segue.destination as? SecondViewController {
-                secondVC.bmi = self.bmi
+                secondVC.bmi = bmiManager.getBMI(height: heightTextField.text!, weight: weightTextField.text!)
             }
         }
         heightTextField.text = ""
         weightTextField.text = ""
     }
-    
-    func calcurateBMI(height: String, weight: String) -> Double {
-        guard let h = Double(height), let w = Double(weight) else {return 0.0}
-        var bmi = w / (h*h) * 10000
-        bmi = round(bmi*10) / 10
-        return bmi
-        
-    }
-    
 }
 
 
