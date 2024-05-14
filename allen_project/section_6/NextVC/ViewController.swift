@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         present(secondVC, animated: true, completion: nil)
     }
     
-    // 3) 스토리보드로 생성 후 스토리보드로 연결 (간접 세그웨이 - 화면끼리 이어준다)
+    // 3) 스토리보드로 생성 후 스토리보드로 연결 (간접 세그웨이 - 화면과 화면을 이어준다)
     @IBAction func storyboardWithSegueButtonTapped(_ sender: UIButton) {
      
         // 버튼 클릭 -> 세그웨이 활성화 -> prepare 함수 자동호출
