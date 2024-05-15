@@ -209,7 +209,7 @@ final class ViewController: UIViewController {
             passwordResetButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             passwordResetButton.heightAnchor.constraint(equalToConstant: textViewHeight),
             
-        ])
+        ]) 
     }
     
     // selector를 통해서 호출되므로 @objc를 붙인다
