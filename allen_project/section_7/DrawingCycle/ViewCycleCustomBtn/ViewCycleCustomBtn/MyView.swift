@@ -49,12 +49,12 @@ class MyView: UIView {
     }
     
     // 버튼의 넓이와 높이를 프레임기준으로 맞춘다면
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        print(#function)
-//
-//        myButton.frame.size = CGSize(width: self.frame.size.width/2, height: self.frame.size.height/2)
-//        myButton.center = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
-//    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        print(#function)
+
+        myButton.frame.size = CGSize(width: self.frame.size.width/2, height: self.frame.size.height/2)
+        myButton.center = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
+    }
     
 }

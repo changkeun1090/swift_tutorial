@@ -25,7 +25,7 @@ final class ViewController: UIViewController {
         button.onAndOff = false
 		        return button
     }()
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

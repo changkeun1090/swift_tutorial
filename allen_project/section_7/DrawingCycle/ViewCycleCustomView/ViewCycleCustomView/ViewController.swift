@@ -8,7 +8,7 @@
 import UIKit
 
 final class ViewController: UIViewController {
-    
+        
     private lazy var myButton: MyButton = {
         let button = MyButton()
         button.backgroundColor = .yellow
@@ -20,6 +20,7 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(#function)
         setupUI()
         setupConstraints()
         
@@ -27,16 +28,19 @@ final class ViewController: UIViewController {
     
     // 뷰컨트롤러에서 프레임이 결정이 되는 곳 ⭐️
     // 그래서, 버튼을 넓이 기준으로 깍는 것이 가능(넓이 프레임이 결정되니까)
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        self.myButton.layer.cornerRadius = self.myButton.frame.width / 2
-    }
+//    override func viewDidLayoutSubviews() {
+//        print(#function)
+//        super.viewDidLayoutSubviews()
+//        self.myButton.layer.cornerRadius = self.myButton.frame.width / 2
+//    }
     
     func setupUI() {
+        print(#function)
         view.addSubview(myButton)
     }
     
     func setupConstraints() {
+        print(#function)
         myButton.translatesAutoresizingMaskIntoConstraints = false
     
         myButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 50).isActive = true
@@ -50,7 +54,7 @@ final class ViewController: UIViewController {
     }
     
     @objc func handleButtonAction(){
-        print(#function)
+//        print(#function)
     }
     
 }
