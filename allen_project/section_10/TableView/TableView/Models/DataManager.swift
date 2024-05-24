@@ -23,6 +23,12 @@ class DataManager {
     func getMovieData() -> [Movie] {
         return movieDataArray
     }
+    
+    func updateMovieData() {
+        if let random = movieDataArray.randomElement() {
+            movieDataArray.append(random)
+        }
+    }
  
 }
 
