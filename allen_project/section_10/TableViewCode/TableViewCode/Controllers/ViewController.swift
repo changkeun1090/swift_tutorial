@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  TableViewCode
-//
-//  Created by Allen H on 2022/01/20.
-//
-
 import UIKit
 
 final class ViewController: UIViewController {

@@ -32,6 +32,7 @@ final class MyTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
+        
         setupStackView()
         
         // 셀 오토레이아웃 일반적으로 생성자에서 잡으면 됨 ⭐️⭐️⭐️
@@ -59,10 +60,10 @@ final class MyTableViewCell: UITableViewCell {
     }
     
     // 오토레이아웃 재계산 시점 (뷰가 변하는 경우) ===> 일반적으로 생성자에서 잡으면 됨 ⭐️⭐️⭐️
-//    override func updateConstraints() {
-//        setConstraints()
-//        super.updateConstraints()
-//    }
+    override func updateConstraints() {
+        setConstraints()
+        super.updateConstraints()
+    }
     
     func setConstraints() {
         setMainImageViewConstraints()
