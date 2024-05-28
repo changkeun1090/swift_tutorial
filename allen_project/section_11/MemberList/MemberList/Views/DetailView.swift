@@ -1,6 +1,6 @@
 import UIKit
 
-final class DetailView: UIView {
+class DetailView: UIView {
     
     //MARK: - 멤버 저장속성 구현
     // 멤버 데이터가 바뀌면 ===> didSet(속성감시자) 실행
@@ -254,13 +254,13 @@ final class DetailView: UIView {
     
     func setupNotification() {
         // 노티피케이션의 등록 ⭐️
-        // (OS차원에서 어떤 노티피케이션이 발생하는지 이미 정해져 있음)
+        // (OS차원에서 어떤 노티피케이션이 발생하는지 이미 정해져 있음) / 싱글톤패턴
         NotificationCenter.default.addObserver(self, selector: #selector(moveUpAction), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(moveDownAction), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func setupMemberIdTextField() {
-        memberIdTextField.delegate = self
+        memberIdTextField.delegate = self 
     }
     
     //MARK: - 오토레이아웃 셋팅
@@ -318,6 +318,7 @@ final class DetailView: UIView {
         }
     }
     
+    // 키보드 내리기
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.endEditing(true)
     }
@@ -332,7 +333,7 @@ final class DetailView: UIView {
 }
 
 //MARK: - 텍스트필드 델리게이트 구현
-
+//: 사용자가 ID 변경하지 못하도록
 extension DetailView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -345,3 +346,4 @@ extension DetailView: UITextFieldDelegate {
         return true
     }
 }
+

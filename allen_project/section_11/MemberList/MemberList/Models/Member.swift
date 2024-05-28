@@ -1,6 +1,12 @@
 import Foundation
 import UIKit
 
+// DetailViewController에서 일어난 일을 대리자인 ViewController에게 알려주는 함수들 
+protocol MemberDelegate: AnyObject { //: Class에서만 채택할 수 있게 AnyObject 추가
+    func addNewMember(_ member: Member)
+    func update(index: Int, _ member: Member)
+}
+
 struct Member {
     
     lazy var memberImage: UIImage? = {
