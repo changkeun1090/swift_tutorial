@@ -30,7 +30,12 @@ class MyTableViewCell: UITableViewCell {
     private var memberImage = UIImage()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        <#code#>
+        
+        setupView()
+    }
+    
+    func setupView() {
+        
     }
 
     required init?(coder: NSCoder) {
