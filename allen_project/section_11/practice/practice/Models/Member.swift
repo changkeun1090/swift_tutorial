@@ -1,10 +1,3 @@
-//
-//  Model.swift
-//  Practice
-//
-//  Created by ChangKeun Ji on 5/29/24.
-//
-
 import UIKit
 
 struct Member {
@@ -30,8 +23,7 @@ struct Member {
         self.age = age
         self.phone = phone
         self.address = address
-        self.memberId = Member.memberNumbers == 0 ? 0:Member.memberNumbers
-        
+        self.memberId = Member.memberNumbers == 0 ? 0:Member.memberNumbers        
         Member.memberNumbers += 1
     }
 }
