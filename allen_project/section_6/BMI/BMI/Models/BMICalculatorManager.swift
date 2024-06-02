@@ -7,12 +7,12 @@ struct BMICalculatorManager {
     private var bmi: BMI?
     
     // BMI얻기 메서드
-    mutating func getBMI(height: String, weight: String) -> BMI {
-        // BMI만들기 메서드 호출
-        calculateBMI(height: height, weight: weight)
-        // BMI리턴
-        return bmi ?? BMI(value: 0.0, advice: "문제발생", matchColor: UIColor.white)
-    }
+//    mutating func getBMI(height: String, weight: String) -> BMI {
+//        // BMI만들기 메서드 호출
+//        calculateBMI(height: height, weight: weight)
+//        // BMI리턴
+//        return bmi ?? BMI(value: 0.0, advice: "문제발생", matchColor: UIColor.white)
+//    }
     
     // BMI만들기 메서드(BMI수치 계산해서, BMI구조체 인스턴스 만드는 메서드)
     mutating private func calculateBMI(height: String, weight: String) {
